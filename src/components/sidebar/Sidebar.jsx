@@ -1,11 +1,13 @@
-import "./sidebar.scss"
+import React from 'react';
 import { Link } from "react-router-dom";
+import "./sidebar.scss"
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import Inventory2Icon from '@mui/icons-material/Inventory2';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import StoreIcon from '@mui/icons-material/Store';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
+import CategoryIcon from '@mui/icons-material/Category';
 
 const Sidebar = () => {
   return (
@@ -20,33 +22,42 @@ const Sidebar = () => {
       <ul>
         <p className="title">MAIN</p>
         <li>
-            <DashboardIcon className="icon"/>
+          <DashboardIcon className='icon'></DashboardIcon>
           <span>Dashboard</span>
         </li>
         <p className="title">LIST</p>
         <Link to="/users">
           <li>
-            <PersonOutlineIcon className="icon"/>
+           <PersonOutlineOutlinedIcon className='icon'></PersonOutlineOutlinedIcon>
             <span>Users</span>
           </li>
         </Link>
         <Link to="/products">
           <li>
-            <Inventory2Icon className="icon"/>
+          <StoreIcon className='icon'></StoreIcon>
             <span>Products</span>
           </li>
         </Link>
         <li>
-            <StoreIcon className="icon"/>
+        <ShoppingCartTwoToneIcon className='icon'></ShoppingCartTwoToneIcon>
           <span>Orders</span>
         </li>
+
+        <Link to="/categories">
+          <li>
+           <CategoryIcon className='icon'></CategoryIcon>
+            <span>Categories</span>
+          </li>
+        </Link>
+
+
         <p className="title">USER</p>
         <li>
-            <AccountCircleIcon className="icon"/>
+        <AccountBoxIcon className='icon'></AccountBoxIcon>
           <span>Profile</span>
         </li>
         <li>
-            <LogoutIcon className="icon"/>
+        <LogoutIcon className='icon'></LogoutIcon>
           <span>Logout</span>
         </li>
       </ul>
@@ -56,7 +67,7 @@ const Sidebar = () => {
       <div className="colorOption"></div>
     </div>
   </div>
-  )
-}
+    );
+};
 
-export default Sidebar
+export default Sidebar;
